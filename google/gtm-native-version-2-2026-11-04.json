@@ -1,0 +1,1295 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-11-04 15:07:00",
+    "containerVersion": {
+        "path": "accounts/6402453283/containers/285168513/versions/2",
+        "accountId": "6402453283",
+        "containerId": "285168513",
+        "containerVersionId": "2",
+        "name": "FXE foundation — ready for installation and live QA",
+        "description": "5 tags, 5 triggers, 16 variables. Manual page views via fx_page_ready; backend-confirmed lead via fx_form_success; contact and ecosystem clicks; URL sanitization and staff marker. Offline validation passed. Not published: site installation and live QA pending.",
+        "container": {
+            "path": "accounts/6402453283/containers/285168513",
+            "accountId": "6402453283",
+            "containerId": "285168513",
+            "name": "foodexecosystem.com",
+            "publicId": "GTM-WSNCPQCX",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1793793583674",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6402453283/containers/285168513/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-WSNCPQCX"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "tagId": "20",
+                "name": "FXE | GA4 | Base",
+                "type": "dest_ga",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "destinationId",
+                        "value": "G-E667121MXL"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "configSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "send_page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "traffic_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Traffic | Staff marker}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "allow_google_signals"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "allow_ad_personalization_signals"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_location"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe location}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_referrer"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe referrer}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1793803876202",
+                "firingTriggerId": [
+                    "19"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "tagId": "25",
+                "name": "FXE | GA4 | Contact click",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content group}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_language"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content language}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Page type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_location"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe location}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "contact_method"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Link | Contact method}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "link_position"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Link | Position}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "contact_click"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-E667121MXL"
+                    }
+                ],
+                "fingerprint": "1793803876204",
+                "firingTriggerId": [
+                    "18"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "tagId": "27",
+                "name": "FXE | GA4 | Ecosystem navigation",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content group}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_language"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content language}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Page type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_location"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe location}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "destination_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Link | Destination group}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "link_position"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Link | Position}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "ecosystem_navigation_click"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-E667121MXL"
+                    }
+                ],
+                "fingerprint": "1793803876204",
+                "firingTriggerId": [
+                    "26"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "tagId": "29",
+                "name": "FXE | GA4 | Form success",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content group}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_language"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content language}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Page type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_location"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe location}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "form_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | DLV | Form ID}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "generate_lead"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-E667121MXL"
+                    }
+                ],
+                "fingerprint": "1793803876205",
+                "firingTriggerId": [
+                    "12"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "tagId": "30",
+                "name": "FXE | GA4 | Page view",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content group}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_language"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Content language}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Page type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_location"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe location}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_title"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | DLV | Page title}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_referrer"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FXE | Page | Safe referrer}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "page_view"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-E667121MXL"
+                    }
+                ],
+                "fingerprint": "1793803876205",
+                "firingTriggerId": [
+                    "22"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "triggerId": "12",
+                "name": "FXE | CE | Verified form success",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "fx_form_success"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Page | Allowed}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Form | Lead allowed}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1793803876200"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "triggerId": "18",
+                "name": "FXE | Click | Contact links",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Page | Allowed}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Link | Contact method}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(phone|email|whatsapp)$"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1793803876202"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "triggerId": "19",
+                "name": "FXE | Init | Public site",
+                "type": "INIT",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Page | Allowed}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1793803876202"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "triggerId": "22",
+                "name": "FXE | CE | Page ready",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "fx_page_ready"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Page | Allowed}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Page | Message valid}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1793803876203"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "triggerId": "26",
+                "name": "FXE | Click | Ecosystem destination",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Page | Allowed}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{FXE | Link | Destination group}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(consultant|iran|digital|trade)$"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1793803876204"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "3",
+                "name": "FXE | DLV | Page location",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "fx_page_location"
+                    }
+                ],
+                "fingerprint": "1793803876197"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "4",
+                "name": "FXE | Page | Safe location",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var raw={{Event}}==='fx_page_ready'?{{FXE | DLV | Page location}}:{{Page URL}};\n try{var u=new URL(raw);\n if(u.protocol!=='https:'||!/^(www\\.)?foodexecosystem\\.com$/.test(u.hostname)||u.port||u.username||u.password)return undefined;\n var safe=new URL(u.origin+u.pathname), keys=['utm_source','utm_medium','utm_campaign','utm_id','utm_content','utm_term'];\n keys.forEach(function(key) {\n var v=u.searchParams.get(key);\n if(v && v.length <= 120 && /^[A-Za-z0-9._~-]+$/.test(v) && !/[0-9][0-9][0-9][0-9][0-9][0-9][0-9]/.test(v)) safe.searchParams.set(key,v);\n });\n var service=u.searchParams.get('service');\n if(service==='foodex-consultant'||service==='foodex-digital'||service==='foodex-trade')safe.searchParams.set('service',service);\n return safe.href;\n }catch(e){return undefined;}\n}"
+                    }
+                ],
+                "fingerprint": "1793804589346",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "5",
+                "name": "FXE | DLV | Page referrer",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "fx_page_referrer"
+                    }
+                ],
+                "fingerprint": "1793803876198"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "6",
+                "name": "FXE | Page | Allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n try { var u=new URL({{Page URL}}), p=u.pathname.replace(/^\\/(fa|en|ar)(?=\\/|$)/,'')||'/';\n return u.protocol==='https:' && /^(www\\.)?foodexecosystem\\.com$/.test(u.hostname) && !u.port && !u.username && !u.password && !/^\\/(admin|api|auth|login|_next)(?:\\/|$)/.test(p);\n } catch(e){return false;}\n}"
+                    }
+                ],
+                "fingerprint": "1793803876199"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "7",
+                "name": "FXE | DLV | Page title",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "fx_page_title"
+                    }
+                ],
+                "fingerprint": "1793803876199"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "8",
+                "name": "FXE | Link | Destination group",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n try{var u=new URL({{Click URL}}||'',{{Page URL}});\n if(u.protocol!=='https:'||u.port||u.username||u.password)return undefined;\n if(/^(www\\.)?foodexiran\\.com$/.test(u.hostname))return /^\\/(?:en\\/|fa\\/)?services(?:\\/|$)/.test(u.pathname)?'consultant':'iran';\n if(/^(www\\.)?(foodexdigital\\.com|foodex\\.digital)$/.test(u.hostname))return 'digital';\n if(/^(www\\.)?foodextrade\\.com$/.test(u.hostname))return 'trade';\n }catch(e){}return undefined;\n}"
+                    }
+                ],
+                "fingerprint": "1793803876199"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "10",
+                "name": "FXE | DLV | Form ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "form_id"
+                    }
+                ],
+                "fingerprint": "1793803876200"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "11",
+                "name": "FXE | Form | Lead allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n if(!{{FXE | Page | Allowed}})return false;\n var p=({{Page Path}}||'/').replace(/^\\/(fa|en|ar)(?=\\/|$)/,'')||'/', id={{FXE | DLV | Form ID}};\n return id==='node-eoi-form'&&p==='/'||id==='contact-form'&&/^\\/contact-us\\/?$/.test(p);\n}"
+                    }
+                ],
+                "fingerprint": "1793803876200"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "13",
+                "name": "FXE | Link | Position",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var el={{Click Element}};\n if(!el||!el.closest)return 'other';\n if(el.closest('footer'))return 'footer';\n if(el.closest('header'))return 'header';\n if(el.closest('main'))return 'main';\n return 'other';\n}"
+                    }
+                ],
+                "fingerprint": "1793803876201"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "14",
+                "name": "FXE | Traffic | Staff marker",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {return /(?:^|;\\s*)fxe_staff=1(?:;|$)/.test(document.cookie||'')?'internal':undefined;}"
+                    }
+                ],
+                "fingerprint": "1793803876201"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "15",
+                "name": "FXE | Page | Content language",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var m=/^\\/(fa|en|ar)(?:\\/|$)/.exec({{Page Path}}||'');\n if(m)return m[1];\n var lang=(document.documentElement.lang||'').toLowerCase().split('-')[0];\n return /^(en|fa|ar)$/.test(lang)?lang:'other';\n}"
+                    }
+                ],
+                "fingerprint": "1793803876201"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "16",
+                "name": "FXE | Page | Safe referrer",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var raw={{Event}}==='fx_page_ready'?{{FXE | DLV | Page referrer}}:{{Referrer}};\n if(!raw)return '';\n try{var u=new URL(raw);if(!/^https?:$/.test(u.protocol))return '';\n return u.origin+(/^(www\\.)?foodexecosystem\\.com$/.test(u.hostname)&&!u.port?u.pathname:'/');\n }catch(e){return '';}\n}"
+                    }
+                ],
+                "fingerprint": "1793803876201"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "17",
+                "name": "FXE | Link | Contact method",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var raw={{Click URL}}||'';\n if(/^tel:/i.test(raw))return 'phone';\n if(/^mailto:/i.test(raw))return 'email';\n try{var u=new URL(raw,{{Page URL}});\n if(u.protocol==='https:'&&!u.port&&!u.username&&!u.password&&/^(wa\\.me|api\\.whatsapp\\.com|web\\.whatsapp\\.com)$/.test(u.hostname))return 'whatsapp';\n }catch(e){}return undefined;\n}"
+                    }
+                ],
+                "fingerprint": "1793803876202"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "21",
+                "name": "FXE | Page | Message valid",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n if(!{{FXE | Page | Allowed}})return false;\n try{var supplied=new URL({{FXE | DLV | Page location}}), current=new URL({{Page URL}}), title={{FXE | DLV | Page title}}, ref={{FXE | DLV | Page referrer}};\n return supplied.href.split('#')[0]===current.href.split('#')[0]&&typeof title==='string'&&title.length>0&&title.length<=300&&title===document.title&&typeof ref==='string'&&ref.length<=2048;\n }catch(e){return false;}\n}"
+                    }
+                ],
+                "fingerprint": "1793803876203"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "23",
+                "name": "FXE | Page | Content group",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var p=({{Page Path}}||'/').replace(/^\\/(fa|en|ar)(?=\\/|$)/,'')||'/';\n if(/^\\/(admin|api|auth|login|_next)(?:\\/|$)/.test(p))return 'admin';\n if(/^\\/(policies|privacy|terms|confidentiality)\\/?$/.test(p))return 'policies';\n if(/^\\/(about-us|contact-us|faq)?\\/?$/.test(p))return 'corporate';\n return 'other';\n}"
+                    }
+                ],
+                "fingerprint": "1793803876203"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "variableId": "24",
+                "name": "FXE | Page | Page type",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var p=({{Page Path}}||'/').replace(/^\\/(fa|en|ar)(?=\\/|$)/,'')||'/';\n if(/^\\/(admin|api|auth|login|_next)(?:\\/|$)/.test(p))return 'admin';\n if(p==='/')return 'home';\n var m=/^\\/(about-us|contact-us|faq|policies|privacy|terms|confidentiality)\\/?$/.exec(p);\n if(!m)return 'other';\n return m[1]==='about-us'?'about':m[1]==='contact-us'?'contact':/^(privacy|terms|confidentiality|policies)$/.test(m[1])?'policy':m[1];\n}"
+                    }
+                ],
+                "fingerprint": "1793803876203"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            }
+        ],
+        "fingerprint": "1793804725030",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6402453283/containers/285168513/versions/2?apiLink=version",
+        "gtagConfig": [
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "gtagConfigId": "9",
+                "type": "ogt_1p_data_v2",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "isEnabled",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1793803876199"
+            },
+            {
+                "accountId": "6402453283",
+                "containerId": "285168513",
+                "gtagConfigId": "28",
+                "type": "ogt_auto_events",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableOutboundClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableScroll",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDownload",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableHistoryEvents",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableForm",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableVideo",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1793803876204"
+            }
+        ]
+    }
+}

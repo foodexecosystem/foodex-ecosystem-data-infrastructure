@@ -1,38 +1,43 @@
 # foodex-ecosystem-data-infrastructure
 
-زیرساخت دادهٔ سایت Foodex Ecosystem با Google Analytics 4، Search Console، Tag Manager و BigQuery.
-
-مالک و مقصد مخزن: [foodexecosystem/foodex-ecosystem-data-infrastructure](https://github.com/foodexecosystem/foodex-ecosystem-data-infrastructure). این بسته برای همان مخزن مستقل آماده شده؛ مخزن برنامهٔ سایت و مخزن ایران/دیجیتال تغییر نمی‌کند.
+زیرساخت دادهٔ سایت Foodex Ecosystem با ابزارهای گوگل؛ تنظیمات و مستندات مستقل از کد برنامه.
 
 ## وضعیت — 2026-11-04
 
-- Search Console ↔ GA4: لینک واقعی مشاهده شد.
-- BigQuery: لینک foodex-ecosystem، خروجی Daily در US؛ وجود جدول و داده هنوز تأیید نشده.
-- GTM: کانتینر GTM-WSNCPQCX موجود ولی خالی؛ تعریف تگ، نصب، آزمون و انتشار باقی است.
-- GitHub: دسترسی نوشتن افزونه برقرار شد؛ پنج فایل این نسخه در همین مخزن مستقل ثبت شده‌اند.
+- Search Console به GA4 متصل است؛ لینک واقعی در هر دو پنل مشاهده شد.
+- BigQuery به پروژهٔ foodex-ecosystem در US با خروجی Daily متصل است؛ وجود جدول و رکورد هنوز تأیید نشده.
+- پنج تگ GTM ساخته، اعتبارسنجی و در نسخهٔ ۲ ذخیره شده‌اند؛ هنوز منتشر نشده‌اند.
+- شش بُعد رویدادی GA4 و generate_lead به‌عنوان Key event ثبت شده‌اند؛ فیلتر داخلی در Testing است.
+- مرحلهٔ فنی باقی‌مانده: نصب کانتینر و اتصال پیام صفحه/موفقیت فرم توسط مسئول برنامه، سپس آزمون زنده و انتشار.
 
-اطلاعات پنل‌های گوگل در گزارش، شواهد بررسی قبلی همین روز است. بازبینی تازهٔ مرورگر با خروج از حساب مواجه شد؛ به معنی قطع اتصال‌ها نیست.
-
-## فایل‌ها
+## فایل‌های اصلی
 
 - [گزارش وضعیت و شواهد](reports/status-2026-11-04.md)
-- [طرح اولیهٔ اندازه‌گیری؛ هنوز نهایی/پیاده نشده](google/measurement-plan.md)
-- [چک‌لیست نصب، آزمون و انتشار](google/deployment-and-qa.md)
+- [قرارداد آمادهٔ اجرا برای رسول](google/measurement-contract.md)
+- [طرح اندازه‌گیری](google/measurement-plan.md)
+- [آزمون و انتشار](google/deployment-and-qa.md)
+- [فایل Import تولیدشده](google/gtm-foundation-import.json)
+- [خروجی بومی نسخهٔ ۲](google/gtm-native-version-2-2026-11-04.json)
 - [بررسی فقط‌خواندنی BigQuery؛ اجرا نشده](google/bigquery/verify-export.sql)
 
 ## شناسه‌ها
 
-GA4 property: 562368835 — Stream: 16270370970 — Measurement ID: G-E667121MXL.
-GTM: GTM-WSNCPQCX — Google Cloud project: foodex-ecosystem.
-Timezone: United Arab Emirates / UTC+04:00. Currency: USD.
+| ابزار | شناسه |
+|---|---|
+| GA4 property / stream | 562368835 / 16270370970 |
+| Measurement ID | G-E667121MXL |
+| GTM container | GTM-WSNCPQCX |
+| Google Cloud project | foodex-ecosystem |
+| ساعت / ارز | United Arab Emirates UTC+04 / USD |
 
-## مرزهای کار
+## بازسازی و بررسی
 
-این بسته فایل اجرایی GTM، خروجی بومی GTM یا ادعای تست زنده ندارد؛ تنظیمات اجرایی پس از بررسی واقعی سایت ساخته می‌شوند. مخزن فعلی عمومی است؛ رمز، API key، توکن، اطلاعات فرم، دادهٔ کاربر و تصاویر حساب در آن قرار نگیرد.
+بدون dependency خارجی، با Node.js:
 
-## منابع رسمی
+```sh
+node scripts/build-foundation.mjs
+node scripts/validate-foundation.mjs
+node scripts/compare-native.mjs
+```
 
-- [راه‌اندازی BigQuery export](https://support.google.com/analytics/answer/9823238?hl=en)
-- [قالب Dataset و جدول‌های GA4](https://support.google.com/analytics/answer/7029846?hl=en)
-- [Sandbox](https://docs.cloud.google.com/bigquery/docs/sandbox)
-
+آزمون آفلاین جای آزمون سایت و دریافت داده را نمی‌گیرد. پشتیبان بومی خروجی نسخهٔ ۲ ذخیره‌شده است و به معنی انتشار نیست. مخزن عمومی است؛ دادهٔ کاربران، فرم‌ها، توکن، کلید، تصاویر حساب و لینک Preview در آن قرار نگیرد.
